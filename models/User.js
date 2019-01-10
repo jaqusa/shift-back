@@ -15,16 +15,19 @@ const userSchema = new Schema (
       enum:['agent','user'],
       required: true,
     },
-    saldo:Number,
+    saldo:{
+      type:Number,
+      default:0
+    },
     bank:{
       name: String,
       bank: String,
       number: String,
+      currency:String,
       country: String
     },
     blockchain:{
       address: String,
-      public: String,
       private: String
     }
     
